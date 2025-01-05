@@ -38,7 +38,7 @@ export default function Home() {
     if (!headerCollapsed && document.documentElement.scrollTop > 110) {
       setHeaderHeight(144);
       setHeaderCollapsed(true);
-    } else if (headerCollapsed && document.documentElement.scrollTop === 0) {
+    } else if (headerCollapsed && document.documentElement.scrollTop < 5) {
       setHeaderHeight(288);
       setHeaderCollapsed(false);
     }
@@ -103,18 +103,6 @@ export default function Home() {
   );
 
   /**
-   * The Background Section.
-   */
-  const backgroundSection: JSX.Element = (
-    <div
-      className="w-full h-96 flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream"
-      id="background"
-    >
-      BACKGROUND
-    </div>
-  );
-
-  /**
    * The Experience Section.
    */
   const experienceSection: JSX.Element = (
@@ -127,12 +115,24 @@ export default function Home() {
   );
 
   /**
+   * The Education Section.
+   */
+  const educationSection: JSX.Element = (
+    <div
+      className="w-full h-96 flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream"
+      id="education"
+    >
+      EDUCATION
+    </div>
+  );
+
+  /**
    * The App Sections.
    */
   const appSections: JSX.Element = (
     <div className="w-full h-full flex flex-col text-center overflow-auto">
-      {backgroundSection}
       {experienceSection}
+      {educationSection}
     </div>
   );
 
