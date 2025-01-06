@@ -5,6 +5,7 @@ import { DoubleStripe } from "./components/double-stripe";
 import { ProfilePicture } from "./components/profile-picture";
 import { DarkModeSelector } from "./components/dark-mode-toggle";
 import { JSX, useState } from "react";
+import Image from "next/image";
 
 /**
  * The App Home page.
@@ -107,10 +108,42 @@ export default function Home() {
    */
   const experienceSection: JSX.Element = (
     <div
-      className="w-full h-96 flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream"
+      className="w-full h-fit flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream p-2 gap-8"
       id="experience"
     >
       EXPERIENCE
+      <div className="rounded-xl w-full h-fit bg-black/20 dark:bg-jps-cream/20 flex flex-col md:flex-row">
+        <div className="flex flex-col justify-start h-full text-center w-full md:w-96 bg-camgian-green text-white rounded-t-xl md:rounded-l-xl md:rounded-r-none">
+          <Image
+            src="/headers/camgian.png"
+            alt="Camgian Headquarters"
+            priority
+            width={384}
+            height={577.44}
+            className={
+              "rounded-t-xl md:rounded-tl-xl md:rounded-r-none min-w-full"
+            }
+          />
+          <div className="flex flex-col items-center justify-center">
+            <Image
+              src="/camgian.png"
+              alt="Camgian Logo"
+              priority
+              width={100}
+              height={100}
+              className={"rounded-full border-4 border-white -mt-20 mb-1"}
+            />
+          </div>
+          <div className="flex flex-col justify-center h-fit w-full text-center pb-2">
+            <span className="text-2xl font-extrabold">Camgian</span>
+            <span className="text-sm font-semibold">2021 - Present</span>
+            <span className="text-sm font-semibold">Starkville, MS</span>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center h-fit w-full text-center p-2">
+          CONTENT
+        </div>
+      </div>
     </div>
   );
 
@@ -119,7 +152,7 @@ export default function Home() {
    */
   const educationSection: JSX.Element = (
     <div
-      className="w-full h-96 flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream"
+      className="w-full h-96 flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream gap-8"
       id="education"
     >
       EDUCATION
@@ -130,7 +163,7 @@ export default function Home() {
    * The App Sections.
    */
   const appSections: JSX.Element = (
-    <div className="w-full h-full flex flex-col text-center overflow-auto">
+    <div className="w-full h-full flex flex-col text-center gap-8">
       {experienceSection}
       {educationSection}
     </div>
