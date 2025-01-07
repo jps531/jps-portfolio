@@ -5,7 +5,7 @@ import { DoubleStripe } from "./components/double-stripe";
 import { ProfilePicture } from "./components/profile-picture";
 import { DarkModeSelector } from "./components/dark-mode-toggle";
 import { JSX, useState } from "react";
-import Image from "next/image";
+import { ExperienceCard } from "./components/experience-card";
 
 /**
  * The App Home page.
@@ -108,42 +108,36 @@ export default function Home() {
    */
   const experienceSection: JSX.Element = (
     <div
-      className="w-full h-fit flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream p-2 gap-8"
+      className="w-full h-fit flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream p-4 gap-8"
       id="experience"
     >
-      EXPERIENCE
-      <div className="rounded-xl w-full h-fit bg-black/20 dark:bg-jps-cream/20 flex flex-col md:flex-row">
-        <div className="flex flex-col justify-start h-full text-center w-full md:w-96 bg-camgian-green text-white rounded-t-xl md:rounded-l-xl md:rounded-r-none">
-          <Image
-            src="/headers/camgian.png"
-            alt="Camgian Headquarters"
-            priority
-            width={384}
-            height={577.44}
-            className={
-              "rounded-t-xl md:rounded-tl-xl md:rounded-r-none min-w-full"
-            }
-          />
-          <div className="flex flex-col items-center justify-center">
-            <Image
-              src="/camgian.png"
-              alt="Camgian Logo"
-              priority
-              width={100}
-              height={100}
-              className={"rounded-full border-4 border-white -mt-20 mb-1"}
-            />
-          </div>
-          <div className="flex flex-col justify-center h-fit w-full text-center pb-2">
-            <span className="text-2xl font-extrabold">Camgian</span>
-            <span className="text-sm font-semibold">2021 - Present</span>
-            <span className="text-sm font-semibold">Starkville, MS</span>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center h-fit w-full text-center p-2">
-          CONTENT
-        </div>
+      <div className="flex flex-col items-center justify-center text-2xl font-extrabold -mb-4">
+        EXPERIENCE
       </div>
+      <ExperienceCard
+        name="Camgian"
+        dateRange="2021 - Present"
+        location="Starkville, MS"
+        headerImage="/headers/camgian.png"
+        headerAlt="Camgian Headquarters"
+        logoImage="/camgian.png"
+        logoAlt="Camgian Logo"
+        link="https://camgian.com"
+        linkTitle="camgian.com"
+        sideBarClass="bg-camgian-green text-white"
+      />
+      <ExperienceCard
+        name="Adtran"
+        dateRange="2019"
+        location="Huntsville, AL"
+        headerImage="/headers/adtran.png"
+        headerAlt="Adtran Headquarters"
+        logoImage="/adtran.png"
+        logoAlt="Adtran Logo"
+        link="https://adtran.com"
+        linkTitle="adtran.com"
+        sideBarClass="bg-gradient-to-bl from-adtran-blue from-40% via-60% via-adtran-purple to-adtran-pink text-white"
+      />
     </div>
   );
 
@@ -152,10 +146,36 @@ export default function Home() {
    */
   const educationSection: JSX.Element = (
     <div
-      className="w-full h-96 flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream gap-8"
+      className="w-full h-fit flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream p-4 gap-8"
       id="education"
     >
-      EDUCATION
+      <div className="flex flex-col items-center justify-center text-2xl font-extrabold -mb-4">
+        EDUCATION
+      </div>
+      <ExperienceCard
+        name="Mississippi State University"
+        dateRange="2016 - 2020"
+        location="Starkville, MS"
+        headerImage="/headers/msstate.jpeg"
+        headerAlt="Mississippi State University Campus"
+        logoImage="/msstate.png"
+        logoAlt="Mississippi State University Logo"
+        link="https://cse.msstate.edu"
+        linkTitle="cse.msstate.com"
+        sideBarClass="bg-msstate-maroon text-white"
+      />
+      <ExperienceCard
+        name="Taylorsville High School"
+        dateRange="2012 - 2016"
+        location="Taylorsville, MS"
+        headerImage="/headers/taylorsville.jpeg"
+        headerAlt="Taylorsville High School"
+        logoImage="/taylorsville.png"
+        logoAlt="Taylorsville High School Logo"
+        link="https://sites.google.com/smithcountyschools.net/tac/home"
+        linkTitle="smithcountyschools.net/tac"
+        sideBarClass="bg-taylorsville-gold text-taylorsville-green"
+      />
     </div>
   );
 
@@ -163,7 +183,7 @@ export default function Home() {
    * The App Sections.
    */
   const appSections: JSX.Element = (
-    <div className="w-full h-full flex flex-col text-center gap-8">
+    <div className="w-full h-full flex flex-col text-center gap-4">
       {experienceSection}
       {educationSection}
     </div>

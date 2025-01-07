@@ -23,6 +23,9 @@ export default {
         "adtran-green": "#88cb6c",
         "adtran-purple": "#4262f2",
         "adtran-pink": "#c56ca2",
+        "msstate-maroon": "#3e1a24",
+        "taylorsville-gold": "#ffa800",
+        "taylorsville-green": "#068b48",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
