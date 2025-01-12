@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 import animated from "tailwindcss-animated";
+import typography from "@tailwindcss/typography";
 
 export default {
   darkMode: "selector",
@@ -35,7 +36,23 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      typography: {
+        dark: {
+          css: {
+            "ul > li::marker": {
+              color: "#F3EBE1",
+            },
+          },
+        },
+        DEFAULT: {
+          css: {
+            "ul > li::marker": {
+              color: "#000000",
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [animated, animate],
+  plugins: [animated, animate, typography],
 } satisfies Config;

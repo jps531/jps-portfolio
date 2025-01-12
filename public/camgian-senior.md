@@ -1,0 +1,22 @@
+- Serves as the component lead for all web-based UIs within Camgian.
+  - Performs code reviews and advises on designs and styling for all JavaScript and TypeScript user-facing applications.
+  - Developed custom re-usable Typescript UI components using open-source tools such as Tailwind CSS, Radix UI, visx, and more to increase visual consistency and improve developer experience. Stored these components in a monorepo using Turborepo and set up a pipeline to deploy new versions and snapshots to a private npm registry.
+- Worked on the Cognition product since its inception, from whiteboarding, mockups, formal designs, and prototypes, all the way to a completed minimum viable product.
+  - Worked with executives, upper management, marketing, and product development to formulate and refine initial ideas.
+  - Developed multiple prototypes that were presented to prospective customers, including an interactive Figma mockup and a live demo application with static data.
+  - Personally presented the prototype interfaces to multiple audiences, including fellow engineers, the CEO and board of directors, and even a congressman.
+- Lead UI/UX developer for a custom commercial application version of Cognition that was built from the ground up and deployed to production within 5 months.
+  - Worked with product development team to design the application UI and daily email reports.
+  - Implemented UI by writing re-usable React components that could be re-used by other web-based applications.
+  - Implemented daily email reports with custom body content using React Email and custom rendered PDFs with React PDF.
+  - Worked closely with database engineers to develop APIs with consistent query and data formats.
+  - Designed schema for user and asset configuration database tables.
+  - Contributed heavily to database deployment and debugging when team member left just before the beginning of a QA process.
+  - Used DevOps tools such as Docker and Ansible to create a smooth deployment process and environment.
+  - Worked with IT and quality assurance teams to ensure product was production ready before it was deployed.
+  - Provides production support and feature updates to this application as needed.
+  - Application is used by the customer on a daily basis and [has received abundant positive feedback](https://www.linkedin.com/posts/kevintingley_theres-nothing-like-a-rewarding-client-testimonial-activity-7264646819308003328-GWLb?utm_source=social_share_sheet&utm_medium=member_desktop_web).
+- Mentored multiple co-ops and junior engineers, guiding them as needed and holding bi-weekly meetings to check in and provide advice.
+- Participated in career fairs and interview days and assisted in marketing materials to promote company growth and culture.
+  - Appeared in [photos](https://x.com/CamgianAI/status/1582432525351550977), [videos](https://x.com/CamgianAI/status/1702682436352553221), and [blog posts](https://www.camgian.com/post/putting-the-ui-in-uniform-design-paul-sullivan) for social media.
+  - [Designed rally towels for sponsorship of Mississippi State Men’s Basketball student section.](https://www.behance.net/gallery/215410207/2025-Camgian-x-State-Student-Section-Rally-Towels)

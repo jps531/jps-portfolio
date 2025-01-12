@@ -1,0 +1,5 @@
+- Lead full-stack developer for a custom commercial application.
+  - Met with the customer multiple times both in-person and online to gather requirements, technical information, and feedback on designs and implementations.
+  - Delivered functional results for a complex project on a tight timeline and budget.
+- Developed three-dimensional map-based web UIs for live data visualization using open-source tools such as Mapbox and deck.gl.
+- Developed new features and bug fixes for Android UIs using Java, Kotlin, and XML.

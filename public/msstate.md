@@ -1,0 +1,3 @@
+- Worked as part of an agile software development team to develop and refine frontend software built with Angular.
+- Acquired a new perspective and interest in UX through bug fixes, feature implementations, and discussions with mentors and teammates.
+- Competed in a two-day company-wide hackathon, working on a team that won Best Co-Op Project

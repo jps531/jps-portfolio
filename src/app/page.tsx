@@ -1,11 +1,18 @@
 "use client";
 
-import { appInfo } from "./config/app-text";
+import {
+  adtranExperience,
+  appInfo,
+  camgianExperience,
+  msstateEducation,
+  taylorsvilleEducation,
+} from "./config/app-text";
 import { DoubleStripe } from "./components/double-stripe";
 import { ProfilePicture } from "./components/profile-picture";
 import { DarkModeSelector } from "./components/dark-mode-toggle";
 import { JSX, useState } from "react";
 import { ExperienceCard } from "./components/experience-card";
+import { EducationCard } from "./components/education-card";
 
 /**
  * The App Home page.
@@ -114,30 +121,8 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center text-2xl font-extrabold -mb-4">
         EXPERIENCE
       </div>
-      <ExperienceCard
-        name="Camgian"
-        dateRange="2021 - Present"
-        location="Starkville, MS"
-        headerImage="/headers/camgian.png"
-        headerAlt="Camgian Headquarters"
-        logoImage="/camgian.png"
-        logoAlt="Camgian Logo"
-        link="https://camgian.com"
-        linkTitle="camgian.com"
-        sideBarClass="bg-camgian-green text-white"
-      />
-      <ExperienceCard
-        name="Adtran"
-        dateRange="2019"
-        location="Huntsville, AL"
-        headerImage="/headers/adtran.png"
-        headerAlt="Adtran Headquarters"
-        logoImage="/adtran.png"
-        logoAlt="Adtran Logo"
-        link="https://adtran.com"
-        linkTitle="adtran.com"
-        sideBarClass="bg-gradient-to-bl from-adtran-blue from-40% via-60% via-adtran-purple to-adtran-pink text-white"
-      />
+      <ExperienceCard {...camgianExperience} />
+      <ExperienceCard {...adtranExperience} />
     </div>
   );
 
@@ -152,30 +137,10 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center text-2xl font-extrabold -mb-4">
         EDUCATION
       </div>
-      <ExperienceCard
-        name="Mississippi State University"
-        dateRange="2016 - 2020"
-        location="Starkville, MS"
-        headerImage="/headers/msstate.jpeg"
-        headerAlt="Mississippi State University Campus"
-        logoImage="/msstate.png"
-        logoAlt="Mississippi State University Logo"
-        link="https://cse.msstate.edu"
-        linkTitle="cse.msstate.com"
-        sideBarClass="bg-msstate-maroon text-white"
-      />
-      <ExperienceCard
-        name="Taylorsville High School"
-        dateRange="2012 - 2016"
-        location="Taylorsville, MS"
-        headerImage="/headers/taylorsville.jpeg"
-        headerAlt="Taylorsville High School"
-        logoImage="/taylorsville.png"
-        logoAlt="Taylorsville High School Logo"
-        link="https://sites.google.com/smithcountyschools.net/tac/home"
-        linkTitle="smithcountyschools.net/tac"
-        sideBarClass="bg-taylorsville-gold text-taylorsville-green"
-      />
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+        <EducationCard {...msstateEducation} />
+        <EducationCard {...taylorsvilleEducation} />
+      </div>
     </div>
   );
 
