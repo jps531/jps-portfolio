@@ -1,5 +1,6 @@
 import { ExperienceCardProps } from "@/app/components/experience-card";
 import { EducationCardProps } from "../components/education-card";
+import { ProjectCardProps } from "../components/project-card";
 
 /**
  * The JPS App Info configuration type.
@@ -120,4 +121,39 @@ export const taylorsvilleEducation: EducationCardProps = {
     "2016 THS STAR Student",
     "THS Class of 2016 Salutatorian",
   ],
+};
+
+/**
+ * The Hail State Unis Database Project properties.
+ */
+export const hailStateUnisDatabaseProject: ProjectCardProps = {
+  name: "Hail State Unis Database",
+  dateRange: "2020 - Present",
+  headerImage: "/headers/hailstateunis.jpeg",
+  headerAlt: "A Mississippi State Baseball Player",
+  logoImage: "/hailstateunis.png",
+  logoAlt: "Hail State Unis Logo",
+  link: "https://hailstateunisdatabase.com",
+  linkTitle: "Hail State Unis Database",
+  sideBarClass: "bg-msstate-maroon text-white",
+  content: "",
+  contentPath: "hailstateunis.md",
+};
+
+/**
+ * The Portfolio Website Project properties.
+ */
+export const portfolioWebsiteProject: ProjectCardProps = {
+  name: "This Website",
+  dateRange: "2025",
+  headerImage: "/headers/portfolio.png",
+  headerAlt: "A Mississippi State Baseball Player",
+  logoImage: "/favicon.png",
+  logoAlt: "Paul Sullivan Portfolio Logo",
+  link: "https://github.com/jps531/jps-portfolio",
+  linkTitle: "This Website on GitHub",
+  sideBarClass: "bg-jps-blue !text-jps-cream",
+  iconClass: "!border-jps-cream !bg-jps-cream",
+  content: "",
+  contentPath: "portfolio-website.md",
 };

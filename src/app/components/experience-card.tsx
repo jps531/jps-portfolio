@@ -133,7 +133,7 @@ export const ExperienceCard = ({
   return (
     <div className="rounded-xl w-full h-fit bg-black/10 dark:bg-jps-cream/10 flex flex-col md:flex-row hover:scale-[101%] transition duration-200 ease-in-out">
       <div
-        className={`flex flex-col justify-start h-auto text-center w-full md:w-96 bg-black text-white rounded-t-xl md:rounded-l-xl md:rounded-r-none ${sideBarClass}`}
+        className={`flex flex-col justify-start h-auto text-center w-full md:w-96 bg-black text-white rounded-t-xl md:rounded-l-xl md:rounded-r-none uppercase ${sideBarClass}`}
       >
         <Image
           src={headerImage}
@@ -152,7 +152,9 @@ export const ExperienceCard = ({
             priority
             width={100}
             height={100}
-            className={"rounded-full border-4 border-white -mt-20 mb-1"}
+            className={
+              "rounded-full border-4 border-white bg-white -mt-20 mb-1"
+            }
           />
         </div>
         <div className="flex flex-col justify-center h-fit w-full text-center">

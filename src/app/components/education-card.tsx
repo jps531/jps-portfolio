@@ -17,8 +17,8 @@ export type EducationSection = {
  */
 export type EducationCardProps = {
   name: string;
-  dateRange: string;
-  location: string;
+  dateRange?: string;
+  location?: string;
   headerImage: string;
   headerAlt: string;
   logoImage: string;
@@ -50,7 +50,7 @@ export const EducationCard = ({
   return (
     <div className="rounded-xl w-fit h-fit bg-black/10 dark:bg-jps-cream/10 flex flex-col hover:scale-[101%] transition duration-200 ease-in-out">
       <div
-        className={`flex flex-col justify-start h-auto text-center w-full md:w-96 bg-black text-white rounded-t-xl ${sideBarClass}`}
+        className={`flex flex-col justify-start h-auto text-center w-full md:w-96 bg-black text-white rounded-t-xl uppercase ${sideBarClass}`}
       >
         <Image
           src={headerImage}
@@ -67,19 +67,25 @@ export const EducationCard = ({
             priority
             width={100}
             height={100}
-            className={"rounded-full border-4 border-white -mt-20 mb-1"}
+            className={
+              "rounded-full border-4 border-white bg-white -mt-20 mb-1"
+            }
           />
         </div>
         <div className="flex flex-col justify-center h-fit w-full text-center">
           <span className="text-2xl font-extrabold px-10">{name}</span>
-          <span className="text-sm font-s flex flex-row gap-1 text-center items-center justify-center w-full">
-            <FaCalendarAlt className="h-3 w-3" />
-            {dateRange}
-          </span>
-          <span className="text-sm font-s flex flex-row gap-1 text-center items-center justify-center w-full">
-            <FaLocationDot className="h-3 w-3" />
-            {location}
-          </span>
+          {dateRange && (
+            <span className="text-sm font-s flex flex-row gap-1 text-center items-center justify-center w-full">
+              <FaCalendarAlt className="h-3 w-3" />
+              {dateRange}
+            </span>
+          )}
+          {location && (
+            <span className="text-sm font-s flex flex-row gap-1 text-center items-center justify-center w-full">
+              <FaLocationDot className="h-3 w-3" />
+              {location}
+            </span>
+          )}
         </div>
         {link && (
           <a
@@ -92,7 +98,7 @@ export const EducationCard = ({
           </a>
         )}
       </div>
-      <div className="flex flex-col justify-center h-fit w-full p-2 px-4 normal-case text-sm font-semibold">
+      <div className="flex flex-col justify-center h-fit w-full p-2 px-4 normal-case text-sm font-semibold text-black dark:text-jps-cream">
         {notes.map((n) => (
           <span key={n}>{n}</span>
         ))}

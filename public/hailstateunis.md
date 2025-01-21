@@ -1,0 +1,5 @@
+- Interactive website that queries a database to load interactive tables containing historical uniform records of seven Mississippi sports teams, including four major Mississippi State University teams.
+- Built from the ground up during Summer 2020 when other opportunities were canceled due to COVID-19.
+- Continually maintained to include latest games for all featured teams.
+- Built using PHP, CSS, JavaScript, Bootstrap, and SQL; deployed using AWS Lightsail.
+- Process is underway to re-write the website with modern tools and frameworks such as Next.js, Typescript, TailwindCSS, etc....

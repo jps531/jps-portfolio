@@ -1,0 +1,4 @@
+- Updated personal portfolio website built in early 2025 to showcase skills, experience, and passions after over 4 years of working as a professional software engineer.
+- Built with Next.js 15 using the App Router. Utilizes Tailwind CSS for styling and ShadCN as a basis for re-usable UI components.
+- Styled with a forest green, light blue, and off-white cream color scheme. An updated resume is styled with this same theme.
+- Built-in dark mode that reflects the user's system preference by default.

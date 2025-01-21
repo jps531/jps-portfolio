@@ -4,7 +4,9 @@ import {
   adtranExperience,
   appInfo,
   camgianExperience,
+  hailStateUnisDatabaseProject,
   msstateEducation,
+  portfolioWebsiteProject,
   taylorsvilleEducation,
 } from "./config/app-text";
 import { DoubleStripe } from "./components/double-stripe";
@@ -13,6 +15,15 @@ import { DarkModeSelector } from "./components/dark-mode-toggle";
 import { JSX, useState } from "react";
 import { ExperienceCard } from "./components/experience-card";
 import { EducationCard } from "./components/education-card";
+import { Section } from "./components/section";
+import { ProjectCard } from "./components/project-card";
+import { FaBriefcase, FaGraduationCap, FaHeart, FaLink } from "react-icons/fa";
+import { FiBox } from "react-icons/fi";
+import { BiCodeAlt } from "react-icons/bi";
+import { GiSkills } from "react-icons/gi";
+import { TbPhotoFilled } from "react-icons/tb";
+import { tools } from "./config/tools";
+import { skills } from "./config/skills";
 
 /**
  * The App Home page.
@@ -104,7 +115,7 @@ export default function Home() {
    */
   const appIntro: JSX.Element = (
     <div className="w-full h-fit flex flex-col text-center" id="intro">
-      <span className="text-black dark:text-jps-cream font-semibold italic text-base text-left p-10 animate-jump-in animate-once z-0">
+      <span className="text-black dark:text-jps-cream font-semibold italic text-base text-left px-10 py-0 md:p-10 z-0">
         {appInfo.intro}
       </span>
     </div>
@@ -114,34 +125,105 @@ export default function Home() {
    * The Experience Section.
    */
   const experienceSection: JSX.Element = (
-    <div
-      className="w-full h-fit flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream p-4 gap-8"
-      id="experience"
-    >
-      <div className="flex flex-col items-center justify-center text-2xl font-extrabold -mb-4">
-        EXPERIENCE
-      </div>
+    <Section title="Experience" icon={<FaBriefcase className="h-5 w-5" />}>
       <ExperienceCard {...camgianExperience} />
       <ExperienceCard {...adtranExperience} />
-    </div>
+    </Section>
   );
 
   /**
    * The Education Section.
    */
   const educationSection: JSX.Element = (
-    <div
-      className="w-full h-fit flex flex-col text-center font-bold uppercase text-jps-green dark:text-jps-cream p-4 gap-8"
-      id="education"
-    >
-      <div className="flex flex-col items-center justify-center text-2xl font-extrabold -mb-4">
-        EDUCATION
-      </div>
+    <Section title="Education" icon={<FaGraduationCap className="h-7 w-7" />}>
       <div className="flex flex-col md:flex-row justify-center items-center gap-4">
         <EducationCard {...msstateEducation} />
         <EducationCard {...taylorsvilleEducation} />
       </div>
-    </div>
+    </Section>
+  );
+
+  /**
+   * The Personal Projects Section.
+   */
+  const personalProjectsSection: JSX.Element = (
+    <Section
+      title="Personal Projects"
+      titleClass="min-w-72"
+      icon={<FiBox className="h-6 w-6" />}
+    >
+      <ProjectCard {...hailStateUnisDatabaseProject} />
+      <ProjectCard {...portfolioWebsiteProject} />
+    </Section>
+  );
+
+  /**
+   * The Tools and Technologies Section.
+   */
+  const toolsTechnologiesSection: JSX.Element = (
+    <Section
+      title="Tools and Technologies"
+      icon={<BiCodeAlt className="h-7 w-7" />}
+    >
+      <div className="flex flex-row flex-wrap justify-center items-center gap-4">
+        {tools}
+      </div>
+    </Section>
+  );
+
+  /**
+   * The Soft Skills and Principles Section.
+   */
+  const softSkillsPrinciplesSection: JSX.Element = (
+    <Section
+      title="Soft Skills and Principles"
+      titleClass="min-w-60"
+      icon={<GiSkills className="h-5 w-5" />}
+    >
+      <div className="flex flex-row flex-wrap justify-center items-center gap-4">
+        {skills}
+      </div>
+    </Section>
+  );
+
+  /**
+   * The Passions Section.
+   */
+  const passionsSection: JSX.Element = (
+    <Section title="Passions" icon={<FaHeart className="h-5 w-5" />}>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4"></div>
+    </Section>
+  );
+
+  /**
+   * The Design Portfolio Section.
+   */
+  const designPortfolioSection: JSX.Element = (
+    <Section
+      title="Design Portfolio"
+      titleClass="min-w-72"
+      icon={<TbPhotoFilled className="h-5 w-5" />}
+    >
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+        <iframe
+          src="https://www.behance.net/embed/project/215410207?ilo0=1"
+          height="300"
+          width="300"
+          allowFullScreen
+          allow="clipboard-write"
+          referrerPolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </div>
+    </Section>
+  );
+
+  /**
+   * The Links Section.
+   */
+  const linksSection: JSX.Element = (
+    <Section title="Links" icon={<FaLink className="h-5 w-5" />}>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4"></div>
+    </Section>
   );
 
   /**
@@ -151,6 +233,12 @@ export default function Home() {
     <div className="w-full h-full flex flex-col text-center gap-4">
       {experienceSection}
       {educationSection}
+      {personalProjectsSection}
+      {toolsTechnologiesSection}
+      {softSkillsPrinciplesSection}
+      {passionsSection}
+      {designPortfolioSection}
+      {linksSection}
     </div>
   );
 
