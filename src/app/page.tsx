@@ -23,7 +23,7 @@ import { BiCodeAlt } from "react-icons/bi";
 import { GiSkills } from "react-icons/gi";
 import { TbPhotoFilled } from "react-icons/tb";
 import { tools } from "./config/tools";
-import { skills } from "./config/skills";
+import { softSkills } from "./config/skills";
 
 /**
  * The App Home page.
@@ -180,8 +180,8 @@ export default function Home() {
       titleClass="min-w-60"
       icon={<GiSkills className="h-5 w-5" />}
     >
-      <div className="flex flex-row flex-wrap justify-center items-center gap-4">
-        {skills}
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4">
+        {softSkills}
       </div>
     </Section>
   );
