@@ -24,6 +24,7 @@ import { GiSkills } from "react-icons/gi";
 import { TbPhotoFilled } from "react-icons/tb";
 import { tools } from "./config/tools";
 import { softSkills } from "./config/skills";
+import { PiStarFill } from "react-icons/pi";
 
 /**
  * The App Home page.
@@ -212,8 +213,18 @@ export default function Home() {
           allowFullScreen
           allow="clipboard-write"
           referrerPolicy="strict-origin-when-cross-origin"
+          className="bg-jps-cream dark:bg-black rounded-xl"
         ></iframe>
       </div>
+    </Section>
+  );
+
+  /**
+   * The Spotlight Section.
+   */
+  const spotlightSection: JSX.Element = (
+    <Section title="Spotlight" icon={<PiStarFill className="h-5 w-5" />}>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4"></div>
     </Section>
   );
 
@@ -238,6 +249,7 @@ export default function Home() {
       {softSkillsPrinciplesSection}
       {passionsSection}
       {designPortfolioSection}
+      {spotlightSection}
       {linksSection}
     </div>
   );

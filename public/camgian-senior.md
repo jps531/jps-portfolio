@@ -14,6 +14,7 @@
   - Contributed heavily to database deployment and debugging when team member left just before the beginning of a QA process.
   - Used DevOps tools such as Docker and Ansible to create a smooth deployment process and environment.
   - Worked with IT and quality assurance teams to ensure product was production ready before it was deployed.
+  - Lead UI/UX developer for Phase 2 of the project, which focused on expanding to international users.
   - Provides production support and feature updates to this application as needed.
   - Application is used by the customer on a daily basis and [has received abundant positive feedback](https://www.linkedin.com/posts/kevintingley_theres-nothing-like-a-rewarding-client-testimonial-activity-7264646819308003328-GWLb?utm_source=social_share_sheet&utm_medium=member_desktop_web).
 - Mentored multiple co-ops and junior engineers, guiding them as needed and holding bi-weekly meetings to check in and provide advice.
