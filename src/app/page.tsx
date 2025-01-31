@@ -25,6 +25,7 @@ import { TbPhotoFilled } from "react-icons/tb";
 import { tools } from "./config/tools";
 import { softSkills } from "./config/skills";
 import { PiStarFill } from "react-icons/pi";
+import { passions } from "./config/passions";
 
 /**
  * The App Home page.
@@ -192,7 +193,9 @@ export default function Home() {
    */
   const passionsSection: JSX.Element = (
     <Section title="Passions" icon={<FaHeart className="h-5 w-5" />}>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4"></div>
+      <div className="flex flex-row flex-wrap gap-4 w-fit justify-center items-center">
+        {passions}
+      </div>
     </Section>
   );
 
@@ -207,6 +210,7 @@ export default function Home() {
     >
       <div className="flex flex-col md:flex-row justify-center items-center gap-4">
         <iframe
+          title="Camgian x STATE Student Section Design Portfolio"
           src="https://www.behance.net/embed/project/215410207?ilo0=1"
           height="300"
           width="300"
@@ -214,7 +218,7 @@ export default function Home() {
           allow="clipboard-write"
           referrerPolicy="strict-origin-when-cross-origin"
           className="bg-jps-cream dark:bg-black rounded-xl"
-        ></iframe>
+        />
       </div>
     </Section>
   );
@@ -224,7 +228,16 @@ export default function Home() {
    */
   const spotlightSection: JSX.Element = (
     <Section title="Spotlight" icon={<PiStarFill className="h-5 w-5" />}>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4"></div>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+        <iframe
+          title="Columbus Commercial Dispatch: How Paul Sullivan's Uniform Database Became a Go-To Resource for Bulldogs Fans"
+          src="https://cdispatch.com/sports/how-paul-sullivans-uniform-database-became-a-go-to-resource-for-bulldogs-fans/"
+          allowFullScreen
+          allow="clipboard-write"
+          referrerPolicy="strict-origin-when-cross-origin"
+          className="bg-jps-cream dark:bg-black rounded-xl w-full max-w-[40rem] h-96"
+        />
+      </div>
     </Section>
   );
 
