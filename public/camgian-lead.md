@@ -1,0 +1,6 @@
+- Serves as Engineering Techncial Lead for the Loram program.
+  - Leads semi-daily standup meetings and coordinates constantly with product, management, and engineers to stay in sync, determine plans, and tackle issues.
+  - Took over as ETL between Phase 2 and Phase 3 of the program, leading the team through personel turnover, scalability concerns, and deployment turbulence during the deployment of Phase 2. Led and coordinated the effort to address these concerns with a re-architecture of the backend and database systems as part of Phase 3.
+- Serves as the component lead for all web-based UIs within Camgian.
+  - Performs code reviews and advises on designs and styling for all JavaScript and TypeScript user-facing applications.
+  - Develops and maintains custom re-usable Typescript UI components using open-source tools such as Tailwind CSS, Radix UI, visx, and more to increase visual consistency and improve developer experience. These components are stored in a monorepo using Turborepo with a Jenkins pipeline set up to deploy new versions and snapshots to a private npm registry.

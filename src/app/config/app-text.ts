@@ -18,7 +18,7 @@ export type JPSInfo = {
 export const appInfo: JPSInfo = {
   firstName: "Paul",
   lastName: "Sullivan",
-  subtitles: ["SENIOR SOFTWARE ENGINEER", "FULL-STACK", "UI/UX"],
+  subtitles: ["LEAD SOFTWARE ENGINEER", "FULL-STACK", "UI/UX"],
   intro:
     "I’m a full-stack software engineer passionate about crafting clean, consistent, and user-friendly interfaces. I thrive on transforming " +
     "creative ideas into fully realized products that both fulfill and build upon their original vision. I take pride in delivering satisfying user " +
@@ -42,8 +42,14 @@ export const camgianExperience: ExperienceCardProps = {
   sideBarClass: "bg-camgian-green text-white",
   sections: [
     {
+      title: "Lead Software Engineer",
+      dateRange: "04/2025 - Present",
+      content: "",
+      contentPath: "camgian-lead.md",
+    },
+    {
       title: "Senior Software Engineer",
-      dateRange: "10/2022 - Present",
+      dateRange: "10/2022 - 03/2025",
       content: "",
       contentPath: "camgian-senior.md",
     },
